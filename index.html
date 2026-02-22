@@ -24,7 +24,7 @@
     <div class="blob -top-20 -left-20"></div>
     <div class="blob -bottom-20 -right-20"></div>
 
-    <div class="max-w-3xl w-full text-center">
+    <div class="max-w-4xl w-full text-center relative z-10">
         <div class="mb-8 inline-block p-3 rounded-2xl bg-white shadow-xl">
             <svg class="w-16 h-16 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.618.309a6 6 0 01-3.86.517l-2.387-.477a2 2 0 00-1.022.547l-.513.513a2 2 0 000 2.828l1.285 1.286a2 2 0 002.828 0l.513-.513zm0-11.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.618.309a6 6 0 01-3.86.517l-2.387-.477a2 2 0 00-1.022.547l-.513.513a2 2 0 000 2.828l1.285 1.286a2 2 0 002.828 0l.513-.513z"></path>
@@ -32,30 +32,55 @@
         </div>
         
         <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Anatomy & Physiology <br><span class="text-emerald-600">BIO225</span>
+            Anatomy & Physiology <br><span class="text-emerald-600">BIO225 Full Semester</span>
         </h1>
         
-        <p class="text-lg text-slate-600 mb-10 max-w-xl mx-auto leading-relaxed">
-            Welcome to the ultimate Exam 1 preparation hub. Master everything from cellular biology to homeostatic feedback loops with our interactive review tools.
+        <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Trung tâm ôn tập toàn diện cho môn Giải phẫu & Sinh lý học. Chọn kỳ thi bạn muốn ôn tập bên dưới để bắt đầu.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            <div class="glass p-6 rounded-2xl border border-white shadow-sm text-left">
-                <h3 class="font-bold text-slate-800 mb-1">Concept Review</h3>
-                <p class="text-sm text-slate-500">Lectures 1-7 organized by interactive cards.</p>
+        <!-- Semester Exams Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- Exam 1 Card -->
+            <div class="glass p-8 rounded-3xl border border-white shadow-xl hover:shadow-2xl transition-all group">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-xl">01</span>
+                </div>
+                <h3 class="font-extrabold text-slate-800 text-xl mb-2">Exam 1 Review</h3>
+                <p class="text-sm text-slate-500 mb-6 italic">Homeostasis, Chemistry, Cells & Tissue Repair.</p>
+                <a href="exam1review.html" class="block w-full py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-emerald-600 transition-colors">
+                    Start Exam 1
+                </a>
             </div>
-            <div class="glass p-6 rounded-2xl border border-white shadow-sm text-left">
-                <h3 class="font-bold text-slate-800 mb-1">Practice Lab</h3>
-                <p class="text-sm text-slate-500">Every single practice problem from the guide.</p>
+
+            <!-- Exam 2 Card (Placeholder) -->
+            <div class="glass p-8 rounded-3xl border border-white shadow-xl opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all group">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-xl">02</span>
+                </div>
+                <h3 class="font-extrabold text-slate-800 text-xl mb-2">Exam 2 Review</h3>
+                <p class="text-sm text-slate-500 mb-6 italic">Integumentary, Skeletal & Muscular Systems.</p>
+                <button disabled class="block w-full py-3 bg-slate-200 text-slate-500 font-bold rounded-xl cursor-not-allowed">
+                    Coming Soon
+                </button>
+            </div>
+
+            <!-- Exam 3 Card (Placeholder) -->
+            <div class="glass p-8 rounded-3xl border border-white shadow-xl opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all group">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-xl">03</span>
+                </div>
+                <h3 class="font-extrabold text-slate-800 text-xl mb-2">Exam 3 Review</h3>
+                <p class="text-sm text-slate-500 mb-6 italic">Nervous System & Special Senses.</p>
+                <button disabled class="block w-full py-3 bg-slate-200 text-slate-500 font-bold rounded-xl cursor-not-allowed">
+                    Coming Soon
+                </button>
             </div>
         </div>
 
-        <a href="exam1review.html" class="inline-flex items-center justify-center px-10 py-4 bg-slate-900 text-white font-bold rounded-full hover:bg-emerald-600 transition-all transform hover:scale-105 shadow-2xl group">
-            Start Reviewing
-            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-        </a>
+        <p class="text-slate-400 text-sm font-medium">
+            © 2024 BIO225 Learning Hub • Keep studying!
+        </p>
     </div>
 </body>
 </html>
