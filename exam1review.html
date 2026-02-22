@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIO225 - Exam 1 Ultimate Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .tab-active {
+            background-color: #f1f5f9;
+            border-bottom: 4px solid #10b981;
+            color: #065f46;
+        }
+        .card-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+        }
+        .card-open .card-answer {
+            max-height: 1000px;
+            opacity: 1;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .card-open .icon-plus {
+            transform: rotate(45deg);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header Section -->
+    <header class="bg-slate-900 text-white py-10 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center md:text-left">
+            <span class="bg-emerald-500 text-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Anatomy & Physiology</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-3 tracking-tight">BIO225: Exam 1 Review</h1>
+            <p class="mt-4 text-slate-400 text-lg max-w-2xl">A comprehensive, card-based review of Lectures 1-7 and Practice FRQs. Click any card to reveal details.</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-md">
+        <div class="max-w-5xl mx-auto flex overflow-x-auto no-scrollbar scroll-smooth">
+            <button onclick="switchTab('lect1-3')" id="btn-lect1-3" class="tab-btn px-6 py-5 font-bold whitespace-nowrap tab-active transition-all">Lectures 1-3</button>
+            <button onclick="switchTab('lect4-5')" id="btn-lect4-5" class="tab-btn px-6 py-5 font-bold whitespace-nowrap text-slate-500 transition-all">Lectures 4-5</button>
+            <button onclick="switchTab('lect6-7')" id="btn-lect6-7" class="tab-btn px-6 py-5 font-bold whitespace-nowrap text-slate-500 transition-all">Lectures 6-7</button>
+            <button onclick="switchTab('frq-tab')" id="btn-frq-tab" class="tab-btn px-6 py-5 font-bold whitespace-nowrap text-orange-600 transition-all">FRQ PRACTICE</button>
+            <button onclick="switchTab('practice-q')" id="btn-practice-q" class="tab-btn px-6 py-5 font-bold whitespace-nowrap text-blue-600 transition-all">QUIZ LAB</button>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto p-6 pb-24">
+        
+        <!-- SECTION 1: LECTURES 1-3 (Homeostasis & Chemistry) -->
+        <div id="lect1-3" class="tab-content grid gap-4">
+            <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 mb-2">
+                <p class="text-emerald-800 font-bold uppercase text-xs">Unit 1: Foundations of Life</p>
+            </div>
+
+            <!-- Individual Cards -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">What is Homeostasis?</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed space-y-3">
+                    <p><strong>Definition:</strong> Homeostasis is the maintenance of a relatively stable internal environment despite continuous outside changes.</p>
+                    <p>It is a <span class="text-emerald-600 font-semibold">dynamic state of equilibrium</span> where conditions vary but always within narrow limits.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">What are Feedback Loops?</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed space-y-3">
+                    <p><strong>Most Common:</strong> Negative Feedback (e.g., Body temperature, blood sugar). It shuts off the original stimulus or reduces its intensity.</p>
+                    <p><strong>Dangerous/Special:</strong> Positive Feedback (e.g., Blood clotting, childbirth). It enhances the original stimulus so the response is accelerated.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Atom Components: Protons, Neutrons, Electrons</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <ul class="list-disc ml-5 space-y-1">
+                        <li><strong>Protons (+):</strong> Positive charge, located in the nucleus. Number of protons determines the element.</li>
+                        <li><strong>Neutrons (0):</strong> Neutral charge, located in the nucleus.</li>
+                        <li><strong>Electrons (-):</strong> Negative charge, orbit the nucleus in shells.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Isotopes vs. Ions</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed space-y-3">
+                    <p><strong>Isotopes:</strong> Atoms of the same element that differ in the number of <span class="font-bold">neutrons</span>. They have the same atomic number but different mass numbers.</p>
+                    <p><strong>Ions:</strong> Atoms that have gained or lost <span class="font-bold">electrons</span>, resulting in a positive or negative charge.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Why do chemical bonds occur?</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <p>Chemical bonds occur to fill the <span class="font-bold text-emerald-600 underline">valence shell</span> (outermost shell) with 8 electrons (the <strong>Octet Rule</strong>), reaching a state of maximum stability.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Polarity & Solubility</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed space-y-2">
+                    <p><strong>Polar Molecules:</strong> Unequal sharing of electrons (e.g., Water). They have partial charges.</p>
+                    <p><strong>Nonpolar Molecules:</strong> Equal sharing of electrons (e.g., Fats/Lipids).</p>
+                    <p class="italic">"Like dissolves like" - Polar dissolves in polar; nonpolar dissolves in nonpolar.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Acids vs. Bases</h3>
+                    <div class="icon-plus transition-transform duration-300 text-emerald-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <p><strong>Acids:</strong> Proton donors. They release $H^+$ in solution (pH < 7).</p>
+                    <p><strong>Bases:</strong> Proton acceptors. They take up $H^+$ or release $OH^-$ (pH > 7).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: LECTURES 4-5 (Cells & Genetics) -->
+        <div id="lect4-5" class="tab-content hidden grid gap-4">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-2">
+                <p class="text-blue-800 font-bold uppercase text-xs">Unit 2: Cell Biology & Central Dogma</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">The Plasma Membrane Structure</h3>
+                    <div class="icon-plus transition-transform duration-300 text-blue-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <p>Known as the <strong>Fluid Mosaic Model</strong>. Composed of a double layer of <span class="font-bold italic">Phospholipids</span> with embedded proteins, cholesterol, and carbohydrates.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Selective Permeability</h3>
+                    <div class="icon-plus transition-transform duration-300 text-blue-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <p>The membrane allows some substances to pass while excluding others. Small, nonpolar molecules (like $O_2$ or $CO_2$) pass easily through the lipid core.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Organelle Functions (Quick Reference)</h3>
+                    <div class="icon-plus transition-transform duration-300 text-blue-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="font-bold">Nucleus:</p> <p class="text-sm">Store DNA / Control Center</p>
+                        <p class="font-bold mt-2">Mitochondria:</p> <p class="text-sm">Powerhouse / Produce ATP</p>
+                    </div>
+                    <div>
+                        <p class="font-bold">Ribosomes:</p> <p class="text-sm">Protein synthesis site</p>
+                        <p class="font-bold mt-2">Rough ER:</p> <p class="text-sm">Modifies & packs proteins</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Central Dogma: From DNA to Protein</h3>
+                    <div class="icon-plus transition-transform duration-300 text-blue-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed space-y-3">
+                    <p><strong>1. Transcription (Nucleus):</strong> DNA is used as a template to make mRNA.</p>
+                    <p><strong>2. Translation (Cytoplasm/Ribosome):</strong> mRNA is decoded by tRNA to build a chain of amino acids (protein).</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Cell Cycle & Mitosis</h3>
+                    <div class="icon-plus transition-transform duration-300 text-blue-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <p><strong>Mitosis:</strong> Nuclear division (Prophase, Metaphase, Anaphase, Telophase).</p>
+                    <p><strong>Interphase:</strong> Where the cell spends most of its life (G1, S, G2 phases).</p>
+                    <p class="italic font-bold text-red-500 mt-2">Note: Mitosis is actually a very short part of the total cell cycle!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: LECTURES 6-7 (Signaling & Repair) -->
+        <div id="lect6-7" class="tab-content hidden grid gap-4">
+            <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-2">
+                <p class="text-purple-800 font-bold uppercase text-xs">Unit 3: Communication & Enzymes</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Cell Communication Types</h3>
+                    <div class="icon-plus transition-transform duration-300 text-purple-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed space-y-2">
+                    <p><strong>Autocrine:</strong> Cell signals itself.</p>
+                    <p><strong>Paracrine:</strong> Cell signals immediate neighbors.</p>
+                    <p><strong>Endocrine:</strong> Cell signals distant organs via the bloodstream (Hormones).</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Enzymes & Catalysis</h3>
+                    <div class="icon-plus transition-transform duration-300 text-purple-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <p>Enzymes are biological catalysts (usually proteins). They speed up reactions by <span class="text-purple-700 font-bold underline">lowering the activation energy</span> required for a reaction to begin.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border hover:shadow-md transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-slate-700">Tissue Repair Steps</h3>
+                    <div class="icon-plus transition-transform duration-300 text-purple-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer text-slate-600 leading-relaxed">
+                    <ol class="list-decimal ml-5 space-y-1">
+                        <li><strong>Inflammation:</strong> Prepare the site for repair.</li>
+                        <li><strong>Proliferation:</strong> New tissue formation.</li>
+                        <li><strong>Remodeling:</strong> Mature the new tissue.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRQ SPECIAL TAB -->
+        <div id="frq-tab" class="tab-content hidden space-y-6">
+            <div class="bg-orange-600 text-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-3xl font-black mb-2 italic uppercase">FRQ Mastery Lab</h2>
+                <p class="opacity-80">Practice these short-answer questions. You'll likely see 3 or 4 of these on your exam.</p>
+            </div>
+
+            <!-- Individual FRQ Cards -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500 transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">Question 1</span>
+                        <h3 class="font-bold text-xl text-slate-800 mt-1">Define Homeostasis and Feedback Loops.</h3>
+                    </div>
+                    <div class="icon-plus transition-transform duration-300 text-orange-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer">
+                    <div class="p-4 bg-orange-50 rounded-lg text-slate-700 space-y-3">
+                        <p><strong>Answer:</strong> Homeostasis is the ability to maintain stable internal conditions despite environmental changes. It involves feedback loops which are monitoring systems.</p>
+                        <p><strong>Types:</strong> Negative feedback loops work to reverse a change to bring body back to set point (common). Positive feedback loops work to intensify a change until an endpoint is reached (rare/clotting).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500 transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">Question 2</span>
+                        <h3 class="font-bold text-xl text-slate-800 mt-1">Response to Hot Temperatures.</h3>
+                    </div>
+                    <div class="icon-plus transition-transform duration-300 text-orange-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer">
+                    <div class="p-4 bg-orange-50 rounded-lg text-slate-700">
+                        <p class="mb-2"><strong>The 5 Components:</strong></p>
+                        <ul class="space-y-1">
+                            <li><span class="font-bold">Stimulus:</span> High external/internal heat.</li>
+                            <li><span class="font-bold">Receptor:</span> Thermoreceptors (Skin/Blood).</li>
+                            <li><span class="font-bold">Control Center:</span> Hypothalamus (Brain).</li>
+                            <li><span class="font-bold">Effector:</span> Sweat glands / Blood vessels.</li>
+                            <li><span class="font-bold">Response:</span> Sweating / Vasodilation (to cool down).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500 transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">Question 3</span>
+                        <h3 class="font-bold text-xl text-slate-800 mt-1">The Importance of Valence Shells.</h3>
+                    </div>
+                    <div class="icon-plus transition-transform duration-300 text-orange-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer">
+                    <div class="p-4 bg-orange-50 rounded-lg text-slate-700 space-y-3">
+                        <p>The valence shell is the outermost shell of an atom. Atoms are stable only when this shell is full (usually 8 electrons).</p>
+                        <p><strong>Link to Bonds:</strong> If the shell is nearly full, the atom might steal electrons (Ionic). If it's half-full, it might share (Covalent). If it's full (Noble Gases), it won't bond at all.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500 transition cursor-pointer group" onclick="this.classList.toggle('card-open')">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">Question 4</span>
+                        <h3 class="font-bold text-xl text-slate-800 mt-1">Protein Synthesis Walkthrough.</h3>
+                    </div>
+                    <div class="icon-plus transition-transform duration-300 text-orange-500 text-2xl font-bold">+</div>
+                </div>
+                <div class="card-answer">
+                    <div class="p-4 bg-orange-50 rounded-lg text-slate-700 space-y-4">
+                        <div>
+                            <p class="font-bold underline">Phase 1: Nucleus (Transcription)</p>
+                            <p class="text-sm">DNA acts as a master blueprint. RNA Polymerase reads DNA and creates an mRNA strand.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold underline">Phase 2: Cytoplasm (Translation)</p>
+                            <p class="text-sm">mRNA exits the nucleus and attaches to a <strong>Ribosome</strong>. tRNA molecules bring amino acids that match the mRNA code to build the protein chain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE QUIZ SECTION -->
+        <div id="practice-q" class="tab-content hidden space-y-6">
+            <div class="text-center py-10 bg-blue-600 text-white rounded-2xl shadow-lg mb-8">
+                <h2 class="text-3xl font-bold mb-2">Check Your Knowledge</h2>
+                <p class="opacity-90">Quick self-test from the Lecture Quiz section.</p>
+            </div>
+
+            <!-- Quiz Questions -->
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <p class="font-bold mb-4 text-lg">1. True or False: Mitosis takes a very long time.</p>
+                    <div class="flex gap-4">
+                        <button onclick="checkAns(this, false)" class="px-6 py-2 border rounded-lg hover:bg-slate-100 transition">True</button>
+                        <button onclick="checkAns(this, true)" class="px-6 py-2 border rounded-lg hover:bg-slate-100 transition">False</button>
+                    </div>
+                    <p class="ans-feedback mt-3 hidden text-sm font-semibold"></p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <p class="font-bold mb-4 text-lg">2. Which organelle is in charge of making energy (ATP)?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">a. Nucleus</button>
+                        <button onclick="checkAns(this, true)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">b. Mitochondria</button>
+                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">c. Ribosome</button>
+                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">d. Rough ER</button>
+                    </div>
+                    <p class="ans-feedback mt-3 hidden text-sm font-semibold"></p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <p class="font-bold mb-4 text-lg">3. During which phase do cells physically split apart (cytokinesis starts)?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">a. Prophase</button>
+                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">b. Metaphase</button>
+                        <button onclick="checkAns(this, true)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">c. Anaphase (start splitting)</button>
+                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">d. Telophase</button>
+                    </div>
+                    <p class="ans-feedback mt-3 hidden text-sm font-semibold"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Simple Feedback Toast -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-full shadow-2xl transition-all duration-500 translate-y-20 opacity-0 pointer-events-none z-[100]">
+        Correct! Good job.
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+                btn.classList.add('text-slate-500');
+            });
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('tab-active');
+            activeBtn.classList.remove('text-slate-500');
+            
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function checkAns(btn, isCorrect) {
+            const container = btn.closest('div').parentElement;
+            const feedback = container.querySelector('.ans-feedback');
+            
+            feedback.classList.remove('hidden');
+            if (isCorrect) {
+                feedback.textContent = "✓ Correct!";
+                feedback.className = "ans-feedback mt-3 text-emerald-600 font-bold";
+                showToast("Correct Answer!", "bg-emerald-600");
+            } else {
+                feedback.textContent = "✗ Not quite. Try again!";
+                feedback.className = "ans-feedback mt-3 text-red-500 font-bold";
+            }
+        }
+
+        function showToast(msg, bgColor) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.className = `fixed bottom-10 left-1/2 -translate-x-1/2 ${bgColor} text-white px-6 py-3 rounded-full shadow-2xl transition-all duration-500 opacity-100 z-[100]`;
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0');
+                toast.classList.add('translate-y-20');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
