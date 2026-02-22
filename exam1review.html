@@ -356,42 +356,158 @@
 
         <!-- PRACTICE QUIZ SECTION -->
         <div id="practice-q" class="tab-content hidden space-y-6">
-            <div class="text-center py-10 bg-blue-600 text-white rounded-2xl shadow-lg mb-8">
-                <h2 class="text-3xl font-bold mb-2">Check Your Knowledge</h2>
-                <p class="opacity-90">Quick self-test from the Lecture Quiz section.</p>
+            <div class="bg-blue-600 text-white p-8 rounded-2xl mb-6 shadow-lg">
+                <h2 class="text-3xl font-black italic">PRACTICE PROBLEMS (1-15)</h2>
+                <p class="opacity-90">Every question from the BIO225 Study Guide.</p>
             </div>
 
-            <!-- Quiz Questions -->
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-xl shadow-sm border">
-                    <p class="font-bold mb-4 text-lg">1. True or False: Mitosis takes a very long time.</p>
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">1. True or False: Your cells never change or move.</p>
                     <div class="flex gap-4">
-                        <button onclick="checkAns(this, false)" class="px-6 py-2 border rounded-lg hover:bg-slate-100 transition">True</button>
-                        <button onclick="checkAns(this, true)" class="px-6 py-2 border rounded-lg hover:bg-slate-100 transition">False</button>
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
                     </div>
-                    <p class="ans-feedback mt-3 hidden text-sm font-semibold"></p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border">
-                    <p class="font-bold mb-4 text-lg">2. Which organelle is in charge of making energy (ATP)?</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">a. Nucleus</button>
-                        <button onclick="checkAns(this, true)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">b. Mitochondria</button>
-                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">c. Ribosome</button>
-                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">d. Rough ER</button>
+                <!-- Q2 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">2. True or False: Homeostasis maintains a CONSTANT level for all the variables in the body.</p>
+                    <div class="flex gap-4">
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
                     </div>
-                    <p class="ans-feedback mt-3 hidden text-sm font-semibold"></p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border">
-                    <p class="font-bold mb-4 text-lg">3. During which phase do cells physically split apart (cytokinesis starts)?</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">a. Prophase</button>
-                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">b. Metaphase</button>
-                        <button onclick="checkAns(this, true)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">c. Anaphase (start splitting)</button>
-                        <button onclick="checkAns(this, false)" class="p-3 border rounded-lg text-left hover:bg-slate-50 transition">d. Telophase</button>
+                <!-- Q3 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">3. True or False: Mitosis takes a very long time.</p>
+                    <div class="flex gap-4">
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
                     </div>
-                    <p class="ans-feedback mt-3 hidden text-sm font-semibold"></p>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">4. True or False: The chemical driving force relates to molecules being negative/positive.</p>
+                    <div class="flex gap-4">
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">5. True or False: Integral proteins are imbedded in the plasma membrane.</p>
+                    <div class="flex gap-4">
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">6. True or False: If a molecule has 5 protons it HAS TO have 5 electrons.</p>
+                    <div class="flex gap-4">
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">7. True or False: A promoter region is required in order to start translation.</p>
+                    <div class="flex gap-4">
+                        <button onclick="check(this, false)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">True</button>
+                        <button onclick="check(this, true)" class="flex-1 py-3 border-2 rounded-xl font-bold hover:bg-slate-50">False</button>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">8. Which organelle is in charge of making energy for the cell?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">a. Nucleus</button>
+                        <button onclick="check(this, true)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">b. Mitochondria</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">c. Ribosome</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">d. Rough ER</button>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">9. Fill in the blank: ______ is a protein that reads codons and brings over amino acids.</p>
+                    <div class="flex gap-2">
+                        <input type="text" id="q9-input" placeholder="Enter answer..." class="flex-1 p-3 border-2 rounded-xl outline-none focus:border-blue-500">
+                        <button onclick="checkFillIn('q9-input', 'tRNA')" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition">Submit</button>
+                    </div>
+                    <div id="q9-fb" class="mt-3 hidden font-bold"></div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">10. During which phase of mitosis do cells physically split apart?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">a. Prophase</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">b. Metaphase</button>
+                        <button onclick="check(this, true)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">c. Anaphase</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">d. Telophase</button>
+                    </div>
+                </div>
+
+                <!-- Q11 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">11. A gene has 25 molecules of Adenine (A), how many molecules of Thymine (T)?</p>
+                    <div class="flex gap-2">
+                        <input type="number" id="q11-input" placeholder="Number..." class="flex-1 p-3 border-2 rounded-xl outline-none focus:border-blue-500">
+                        <button onclick="checkFillIn('q11-input', '25')" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition">Submit</button>
+                    </div>
+                    <div id="q11-fb" class="mt-3 hidden font-bold"></div>
+                </div>
+
+                <!-- Q12 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">12. In what stage of protein synthesis is the start codon involved?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">a. Transcription</button>
+                        <button onclick="check(this, true)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">b. Translation</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">c. Reverse Transcription</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">d. Post-translational</button>
+                    </div>
+                </div>
+
+                <!-- Q13 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">13. Which of these is NOT a step for tissue repair?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">a. Remodeling</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">b. Inflammation</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">c. Proliferation</button>
+                        <button onclick="check(this, true)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">d. Concentrating</button>
+                    </div>
+                </div>
+
+                <!-- Q14 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">14. In homeostasis which of these components is the part that senses?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">a. Stimulus</button>
+                        <button onclick="check(this, true)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">b. Receptor</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">c. Control Center</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">d. Effector</button>
+                    </div>
+                </div>
+
+                <!-- Q15 -->
+                <div class="bg-white p-6 rounded-xl border shadow-sm">
+                    <p class="font-bold text-lg mb-4">15. A cell wants to communicate with its neighbor, which form is that?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">a. Endocrine</button>
+                        <button onclick="check(this, true)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">b. Paracrine</button>
+                        <button onclick="check(this, false)" class="p-4 border-2 rounded-xl text-left hover:bg-slate-50 font-medium">c. Autocrine</button>
+                    </div>
                 </div>
             </div>
         </div>
